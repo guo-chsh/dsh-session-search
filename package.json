@@ -1,0 +1,51 @@
+{
+  "name": "dsh-session-search",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Session search: a left-sidebar entry whose panel searches every past session — fuzzy title matches and full-text message matches, archived sessions included.",
+  "license": "MIT",
+  "author": "Llane <cs.guo@outlook.com>",
+  "homepage": "https://github.com/guo-chsh/dsh-session-search#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guo-chsh/dsh-session-search.git"
+  },
+  "bugs": {
+    "url": "https://github.com/guo-chsh/dsh-session-search/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "session-search",
+    "search",
+    "full-text-search",
+    "archived-sessions"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Session search">
+  <defs>
+    <linearGradient id="ss-bubble" x1="10" y1="12" x2="42" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3f9ae0"/>
+      <stop offset="1" stop-color="#2470c8"/>
+    </linearGradient>
+    <linearGradient id="ss-lens" x1="34" y1="30" x2="56" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5aa9e6"/>
+      <stop offset="1" stop-color="#1f5fb3"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="#eef4fd"/>
+  <path d="M12 19.5A6.5 6.5 0 0 1 18.5 13h15a6.5 6.5 0 0 1 6.5 6.5v10a6.5 6.5 0 0 1-6.5 6.5H23.6l-8.2 6.1a1.6 1.6 0 0 1-2.6-1.29V36.4A6.5 6.5 0 0 1 12 30.5Z" fill="url(#ss-bubble)"/>
+  <path d="M19.5 22.5h13M19.5 28.5h9" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity=".92"/>
+  <circle cx="41.5" cy="40" r="9" fill="#f7fbff" stroke="url(#ss-lens)" stroke-width="3.4"/>
+  <path d="m48.2 46.9 6.1 6.1" stroke="url(#ss-lens)" stroke-width="4.2" stroke-linecap="round"/>
+</svg>
