@@ -81,20 +81,28 @@ If a future release renames or removes that row, the plugin does not break: when
 
 The plugin is a normal Harness bundle: a Client module (`client.js`) that registers the sidebar icon and the main-panel page, and a Host entry (`index.js`) that exists only so the package is scanned as a Loader entry — the feature itself lives in the browser. `cordis.patch.yml` arranges the composition.
 
-Add it to a profile and enable the bundle:
+The repository is `dsh-session-search`, the npm package is **`dsh-plugin-session-search`** (the shorter name belongs to an unrelated project on npm). Both refer to this plugin; a Harness row always uses the package name.
+
+Install from npm:
 
 ```powershell
-# profile package.json
-"dsh-session-search": "link:C:/path/to/dsh-session-search"
+dsh plugin --profile desktop add dsh-plugin-session-search
 ```
 
-or install it straight from this repository:
+or straight from this repository:
 
 ```powershell
 dsh plugin --profile desktop add "github:guo-chsh/dsh-session-search"
 ```
 
-then enable `dsh-session-search` in the Plugins page (or with `plugin_manager` `set_bundle`). A Host restart is needed the first time a bundle appears; afterwards a page refresh (Ctrl+R) is enough for client-side changes.
+or from a local checkout:
+
+```jsonc
+// profile package.json
+"dsh-plugin-session-search": "link:C:/path/to/dsh-session-search"
+```
+
+then enable `dsh-plugin-session-search` in the Plugins page (or with `plugin_manager` `set_bundle`). A Host restart is needed the first time a bundle appears; afterwards a page refresh (Ctrl+R) is enough for client-side changes.
 
 ## Files
 

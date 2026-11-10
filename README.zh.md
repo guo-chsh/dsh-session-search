@@ -79,11 +79,12 @@
 
 本插件是一个普通 Harness bundle：客户端半边（`client.js`）注册侧栏图标与主面板页面；Host 半边（`index.js`）只是一个占位入口，让这个包被 `clientModules` 扫描到——功能本身都在浏览器里。`cordis.patch.yml` 负责组合。
 
-把它加进 profile 并启用 bundle：
+仓库名是 `dsh-session-search`，npm 包名是 **`dsh-plugin-session-search`**（短名在 npm 上属于另一个不相关的项目）。两者指的是同一个插件；Harness 的插件行一律使用包名。
+
+从 npm 安装：
 
 ```powershell
-# profile 的 package.json
-"dsh-session-search": "link:C:/path/to/dsh-session-search"
+dsh plugin --profile desktop add dsh-plugin-session-search
 ```
 
 或者直接从本仓库安装：
@@ -92,7 +93,14 @@
 dsh plugin --profile desktop add "github:guo-chsh/dsh-session-search"
 ```
 
-然后在插件页启用 `dsh-session-search`（或用 `plugin_manager` 的 `set_bundle`）。bundle 第一次出现需要重启 Host；之后客户端改动刷新页面（Ctrl+R）即可生效。
+或者在本地检出目录上安装：
+
+```jsonc
+// profile 的 package.json
+"dsh-plugin-session-search": "link:C:/path/to/dsh-session-search"
+```
+
+然后在插件页启用 `dsh-plugin-session-search`（或用 `plugin_manager` 的 `set_bundle`）。bundle 第一次出现需要重启 Host；之后客户端改动刷新页面（Ctrl+R）即可生效。
 
 ## 文件
 

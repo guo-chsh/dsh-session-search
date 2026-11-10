@@ -1,7 +1,6 @@
 {
-  "name": "dsh-session-search",
+  "name": "dsh-plugin-session-search",
   "version": "1.0.0",
-  "private": true,
   "type": "module",
   "description": "Session search: a left-sidebar entry whose panel searches every past session — fuzzy title matches and full-text message matches, archived sessions included.",
   "license": "MIT",
