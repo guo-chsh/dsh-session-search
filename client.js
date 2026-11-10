@@ -37,8 +37,8 @@ window.__ModuleLoader__.load({
     const CONTENT_HIT_LIMIT = 20
 
     const en = {
-      panel: 'Session search',
-      title: 'Session search',
+      panel: 'Recall',
+      title: 'Recall',
       subtitle: 'Searches every past session by title and by message content, archived sessions included.',
       placeholder: 'Search titles and message content…',
       search: 'Search',
@@ -87,8 +87,8 @@ window.__ModuleLoader__.load({
     }
 
     const zh = {
-      panel: '会话搜索',
-      title: '会话搜索',
+      panel: '回忆',
+      title: '回忆',
       subtitle: '按标题和消息正文检索全部历史会话，包括已归档的会话。',
       placeholder: '搜索标题与消息内容…',
       search: '搜索',

@@ -1,8 +1,8 @@
-# dsh-session-search
+# dsh-session-search · 回忆 Recall
 
 [English](README.md) | 中文
 
-给 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 加一个左侧栏「**会话搜索**」入口 + 一个搜索页：**标题模糊匹配** + **消息正文全文检索**，**已归档会话也能搜到**；点结果即可**继续那次对话**（归档会话会先自动取消归档）。
+给 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 加一个左侧栏「**回忆**」入口 + 一个搜索页：**标题模糊匹配** + **消息正文全文检索**，**已归档会话也能搜到**；点结果即可**继续那次对话**（归档会话会先自动取消归档）。
 
 ```
 搜索框  [ 归档 插件 ]                范围: [全部|标题|内容]   [x] 含归档
@@ -19,7 +19,7 @@
 
 | 位置 | 行为 |
 |---|---|
-| 侧栏面板图标「会话搜索」（`sidebar.panellist`，order 12） | 打开主面板搜索页（`main` slot，key `session-search`） |
+| 侧栏面板图标「回忆」（`sidebar.panellist`，order 12） | 打开主面板搜索页（`main` slot，key `session-search`） |
 | 搜索框 | 输入即搜（240ms 防抖），Enter 立即搜，Esc 清空；最长 200 字符 |
 | 范围 | `全部`（标题+内容）/ `标题`（仅本地模糊匹配，零延迟）/ `内容`（仅全文检索） |
 | `含归档` | 默认开；关掉后已归档会话从结果里消失 |
@@ -79,15 +79,9 @@
 
 本插件是一个普通 Harness bundle：客户端半边（`client.js`）注册侧栏图标与主面板页面；Host 半边（`index.js`）只是一个占位入口，让这个包被 `clientModules` 扫描到——功能本身都在浏览器里。`cordis.patch.yml` 负责组合。
 
-仓库名是 `dsh-session-search`，npm 包名是 **`dsh-plugin-session-search`**（短名在 npm 上属于另一个不相关的项目）。两者指的是同一个插件；Harness 的插件行一律使用包名。
+仓库名是 `dsh-session-search`，包名是 **`dsh-session-recall`**（界面上这个插件叫「回忆 / Recall」）。两者指的是同一个插件；Harness 的插件行一律使用包名。
 
-从 npm 安装：
-
-```powershell
-dsh plugin --profile desktop add dsh-plugin-session-search
-```
-
-或者直接从本仓库安装：
+直接从本仓库安装：
 
 ```powershell
 dsh plugin --profile desktop add "github:guo-chsh/dsh-session-search"
@@ -97,10 +91,10 @@ dsh plugin --profile desktop add "github:guo-chsh/dsh-session-search"
 
 ```jsonc
 // profile 的 package.json
-"dsh-plugin-session-search": "link:C:/path/to/dsh-session-search"
+"dsh-session-recall": "link:C:/path/to/dsh-session-search"
 ```
 
-然后在插件页启用 `dsh-plugin-session-search`（或用 `plugin_manager` 的 `set_bundle`）。bundle 第一次出现需要重启 Host；之后客户端改动刷新页面（Ctrl+R）即可生效。
+然后在插件页启用 `dsh-session-recall`（或用 `plugin_manager` 的 `set_bundle`）。bundle 第一次出现需要重启 Host；之后客户端改动刷新页面（Ctrl+R）即可生效。
 
 ## 文件
 

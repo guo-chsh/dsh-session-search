@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Session search",
+    "title": "Recall",
     "description": "A left-sidebar entry that searches every past session — fuzzy title matches and full-text message matches, archived sessions included — and opens a hit in one click."
   }
 }

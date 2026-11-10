@@ -1,8 +1,9 @@
 {
-  "name": "dsh-plugin-session-search",
-  "version": "1.0.0",
+  "name": "dsh-session-recall",
+  "version": "1.0.1",
+  "private": true,
   "type": "module",
-  "description": "Session search: a left-sidebar entry whose panel searches every past session — fuzzy title matches and full-text message matches, archived sessions included.",
+  "description": "Recall: a left-sidebar entry whose panel searches every past session — fuzzy title matches and full-text message matches, archived sessions included.",
   "license": "MIT",
   "author": "Llane <cs.guo@outlook.com>",
   "homepage": "https://github.com/guo-chsh/dsh-session-search#readme",

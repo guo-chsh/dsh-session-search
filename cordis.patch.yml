@@ -1,4 +1,4 @@
-# Composition layer of `dsh-plugin-session-search`.
+# Composition layer of `dsh-session-recall`.
 #
 # 1. `session-query-sqlite` ships as `path: ':memory:'`, `openAt: never`, which
 #    leaves ranked full-text search off in the base composition. This layer
@@ -16,4 +16,4 @@
 
 - insert:
     - id: session-search
-      name: 'dsh-plugin-session-search'
+      name: 'dsh-session-recall'

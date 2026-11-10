@@ -1,8 +1,8 @@
-# dsh-session-search
+# dsh-session-search · Recall
 
 English | [中文](README.zh.md)
 
-A left-sidebar **Session search** entry for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness), plus the search page it opens: **fuzzy title matching** and **full-text message search** over every past session, **archived sessions included**. A click reopens that session and continues the same conversation — an archived hit is unarchived first.
+A left-sidebar **Recall** entry for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness), plus the search page it opens: **fuzzy title matching** and **full-text message search** over every past session, **archived sessions included**. A click reopens that session and continues the same conversation — an archived hit is unarchived first.
 
 ```
 Search  [ archived plugin ]     Scope: [All|Title|Content]   [x] Include archived
@@ -19,7 +19,7 @@ Session search · 12 sessions · 5 title hits · 8 content hits · 34 ms
 
 | Piece | Behaviour |
 |---|---|
-| Sidebar icon **Session search** (`sidebar.panellist`, order 12) | Opens the search page in the main panel (`main` slot, key `session-search`) |
+| Sidebar icon **Recall** (`sidebar.panellist`, order 12) | Opens the search page in the main panel (`main` slot, key `session-search`) |
 | Search box | Searches as you type (240 ms debounce), Enter searches immediately, Esc clears; at most 200 characters |
 | Scope | `All` (title + content) · `Title` (local fuzzy match, zero latency) · `Content` (full-text only) |
 | `Include archived` | On by default; turning it off removes archived sessions from the results |
@@ -81,15 +81,9 @@ If a future release renames or removes that row, the plugin does not break: when
 
 The plugin is a normal Harness bundle: a Client module (`client.js`) that registers the sidebar icon and the main-panel page, and a Host entry (`index.js`) that exists only so the package is scanned as a Loader entry — the feature itself lives in the browser. `cordis.patch.yml` arranges the composition.
 
-The repository is `dsh-session-search`, the npm package is **`dsh-plugin-session-search`** (the shorter name belongs to an unrelated project on npm). Both refer to this plugin; a Harness row always uses the package name.
+The repository is `dsh-session-search`, the package is **`dsh-session-recall`** (the plugin is called *Recall* in the UI). Both refer to this plugin; a Harness row always uses the package name.
 
-Install from npm:
-
-```powershell
-dsh plugin --profile desktop add dsh-plugin-session-search
-```
-
-or straight from this repository:
+Install from this repository:
 
 ```powershell
 dsh plugin --profile desktop add "github:guo-chsh/dsh-session-search"
@@ -99,10 +93,10 @@ or from a local checkout:
 
 ```jsonc
 // profile package.json
-"dsh-plugin-session-search": "link:C:/path/to/dsh-session-search"
+"dsh-session-recall": "link:C:/path/to/dsh-session-search"
 ```
 
-then enable `dsh-plugin-session-search` in the Plugins page (or with `plugin_manager` `set_bundle`). A Host restart is needed the first time a bundle appears; afterwards a page refresh (Ctrl+R) is enough for client-side changes.
+then enable `dsh-session-recall` in the Plugins page (or with `plugin_manager` `set_bundle`). A Host restart is needed the first time a bundle appears; afterwards a page refresh (Ctrl+R) is enough for client-side changes.
 
 ## Files
 

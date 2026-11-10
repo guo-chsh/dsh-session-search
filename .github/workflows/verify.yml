@@ -70,7 +70,7 @@ jobs:
           $patch = Get-Content cordis.patch.yml -Raw
           if ($patch -notmatch "id: session-query-sqlite") { throw 'the patch must target the session-query-sqlite row' }
           if ($patch -notmatch "openAt: first-search") { throw 'full-text search must be opened lazily at first search' }
-          if ($patch -notmatch "name: 'dsh-plugin-session-search'") { throw 'the patch must insert the plugin row' }
+          if ($patch -notmatch "name: 'dsh-session-recall'") { throw 'the patch must insert the plugin row' }
           "ok: composition patch"
 
       - name: Locale metadata is present in both languages
